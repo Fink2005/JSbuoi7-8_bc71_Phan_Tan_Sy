@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div xuất hiện từ trên xuống</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .hidden {
+        display: none; /* Ẩn div khi ban đầu */
+        position: absolute; /* Vị trí tuyệt đối để điều chỉnh vị trí xuất hiện */
+        top: -100%; /* Vị trí ban đầu nằm trên cùng */
+        left: 50%; /* Canh giữa theo chiều ngang */
+        transform: translateX(
+          -50%
+        ); /* Dịch chuyển lề để canh giữa theo chiều ngang */
+        background-color: #fff;
+        width: 80%; /* Độ rộng của div */
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+        transition: top 0.3s ease-in-out; /* Hiệu ứng dịch chuyển */
+      }
+      .visible {
+        top: 50%; /* Hiển thị div từ trên xuống vị trí giữa màn hình */
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showDiv()">Hiển thị div</button>
+
+    <div id="myDiv" class="hidden">
+      <h2>Nội dung của div</h2>
+      <p>
+        Đây là một ví dụ về cách hiển thị một div từ trên xuống bằng JavaScript.
+      </p>
+    </div>
+
+    <script>
+      function showDiv() {
+        var div = document.getElementById("myDiv");
+        div.classList.add("visible");
+      }
+    </script>
+  </body>
+</html>
