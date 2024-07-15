@@ -246,22 +246,252 @@ function click10() {
 
 
 // 2
-arrTry = [-1, 0 ,1 ,2,10]
+// arrTry = [-1, 0 ,1 ,2]
+// // document.getElementById("dem").onclick = function() {
+// count1 = 0
+// for ( var index = 0; index < arrTry.length; index++) {
+//    var results = arrTry[index]
+//    if (results >= 1) {
+//     count1++
+
+// }
+
+// }
+// console.log("cac so duong la", count)
+
+
+
+// 2 
 // document.getElementById("dem").onclick = function() {
-arrin = []
-for (index = 0; index < arrTry.length; index++) {
- var   result = arrTry[index]
- if (result >= 1) {
-    arrin.push(result)
- 
-// document.getElementById("showDemSoDuong").innerHTML = index
-     
- }
- for (indexne = 0; indexne < arrin.length; index++) {
-    console.log(indexne)
- }
+
+//    var count = 0
+//     for (var index = 0; index <= arr.length; index++) {
+//        var resultDem = arr[index]
+//        if (resultDem >= 1) {
+//        count++
+//        }
+    
+//     }
+//     document.getElementById("showDemSoDuong").innerHTML = count
+// }
+
+
+
+
+
+// 3 super easy
+
+// var arrTry = [1,2,3] 
+// let min = Math.min(...arrTry)
+// console.log("so nho nhat la", min)
+
+
+
+// 3 interesting 
+
+
+// document.getElementById("Min").onclick = function() {
+//     let arrMin = arr
+//     console.log("so nho nhat la", findMin(arrnetroi))
+//     document.getElementById("result3").innerHTML = findMin(arrnetroi)
+// }
+// function findMin(number) {
+    
+//     let min = number[0]
+//     for(var index = 0; index < number.length; index++) 
+//     if (number[index] < min) {
+//         min = number[index]
+//     }
+//     return min
+// }
+
+
+
+// 4 super
+//  var arrTry = [1,2,3] 
+//  let max = Math.max(...arrTry)
+//  console.log("so lon nhat la", max)
+
+
+
+// 4 interesting 
+
+document.getElementById("MinP").onclick = function() {
+   let arrMin = arr 
+   document.getElementById("result4").innerHTML = minPNumber(arrMin)
+
+}
+
+function minPNumber(number) {
+    let minP = arr.filter(num => num > 0)
+    
+    return minP.length > 0 ? Math.min(...minP) : undefined
+
 }
 
 
-//xciansdknasdkasdasdasdasdasdasdasd
+
+
+// 5 
+document.getElementById("Even").onclick = function() {
+  
+    document.getElementById("result5").innerHTML = sole(arr)
+
+}
+
+function sole(number) {
+    var resultEven = number
+    for(var index = resultEven.length - 1; index >= 0 ; index-- ){
+       var resultEven1 = resultEven[index]
+        if ( resultEven1 % 2 == 0) {
+            return resultEven1
+        }
+    
+    }
+} 
+
+
+// 6
+
+document.getElementById("reverse").onclick = function() {
+    document.getElementById("showReverse").innerHTML =  doiCho(arr)
+}
+
+
+function doiCho(number) {
+   var doi1 = document.getElementById("doi1").value * 1  
+    var doi2 =document.getElementById("doi2").value * 1
+
+    
+    var luuTru1 = 0 
+    var luuTru2 = 0 
+    for (var index = 0 ; index < number.length; index++) {
+       
+        if (number[index] === doi1 ) {
+            luuTru1 = doi1
+            console.log("🚀 ~ doiCho ~ luuTru1:", luuTru1)
+            
+            
+        }
+        else if (number[index] === doi2) {
+            luuTru2 = doi2
+            console.log("🚀 ~ doiCho ~ luuTru2:", luuTru2)
+        }
+
+    }
+
+        if ( luuTru1 == doi1 && luuTru2 == doi2) {
+            find1 = number.indexOf(luuTru1)
+            find2 = number.indexOf(luuTru2)
+            let archive = number[find1]
+            number[find1] = number[find2]
+            number[find2] = archive
+            return number
+        }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 7 
+
+document.getElementById("sort").onclick = function() {
+    sort = arr.sort(function(a,b) {
+        return a - b
+    })
+   document.getElementById("showSort").innerHTML = sort
+}
+
+// 8 chua lam xong
+
+document.getElementById("prime").onclick = function() { 
+    document.getElementById("showPrime").innerHTML = soNguyenTo(arr)
+
+}
+
+function soNguyenTo(number) {
+    firstNum = number
+  for (index = 0 ; index < firstNum.length; index++) {
+    var resultPrime = firstNum[index] 
+    if ( resultPrime % 2 != 0) {
+        return resultPrime 
+    }
+    break
+  }
+
+}
+
+
+
+// 9  
+document.getElementById("countNguyen").onclick = function() {
+    document.getElementById("showCountNguyen").innerHTML = demNguyen(arr)
+}
+
+
+
+
+function demNguyen(number) {
+    var dem = 0
+   var countNguyenne = number
+   for (index = 0; index < countNguyenne.length; index++) {
+    
+     thu = countNguyenne[index]
+  thu2 =   Number.isInteger(thu)
+       if (thu2 )   {
+         dem++
+        }
+    }
+    return dem
+}
+
+// 10 
+
+document.getElementById("compare").onclick = function() {
+    document.getElementById("showCompare").innerHTML = soSanh(arr)
+}
+
+
+
+
+function soSanh(number) {
+ var   compareNe = number 
+ var   soDuong = 0 
+ var   soAm = 0
+    for (index = 0; index < compareNe.length ; index++) {
+        if (compareNe[index] >= 1 ) {
+            soDuong++
+          
+        }
+        else if (compareNe[index] < 0 ) {
+            soAm++
+        }
+        else { continue }
+        
+    }
+    if (soDuong > soAm ) {
+        return `so duong: ${soDuong} > so am: ${soAm}`
+    }
+    else if (soDuong < soAm) {
+        return ` so duong: ${soDuong} < so am: ${soAm}`
+
+    }
+    else {
+        return ` so duong: ${soDuong} = so am: ${soAm}`
+    }
+}
+
+
 
