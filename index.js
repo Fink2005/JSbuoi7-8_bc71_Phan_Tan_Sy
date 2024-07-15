@@ -233,47 +233,37 @@ function click10() {
 
 // 1
 
-// document.getElementById("tinhtong").onclick = function() {
+document.getElementById("tinhtong").onclick = function() {
    
-//  var  result = arr.reduce((total,number) =>{
-//     return  total + number
-//   })
+ var  result = arr.reduce((total,number) =>{
+    return  total + number
+  })
   
-// document.getElementById("showSoDuong").innerHTML = result
+document.getElementById("showSoDuong").innerHTML = result
 
-// }
+}
 
 
 
-// 2
-// arrTry = [-1, 0 ,1 ,2]
-// // document.getElementById("dem").onclick = function() {
-// count1 = 0
-// for ( var index = 0; index < arrTry.length; index++) {
-//    var results = arrTry[index]
-//    if (results >= 1) {
-//     count1++
 
-// }
 
-// }
-// console.log("cac so duong la", count)
+
 
 
 
 // 2 
-// document.getElementById("dem").onclick = function() {
+document.getElementById("dem").onclick = function() {
 
-//    var count = 0
-//     for (var index = 0; index <= arr.length; index++) {
-//        var resultDem = arr[index]
-//        if (resultDem >= 1) {
-//        count++
-//        }
+   var count = 0
+    for (var index = 0; index <= arr.length; index++) {
+       var resultDem = arr[index]
+       if (resultDem >= 1) {
+       count++
+       }
     
-//     }
-//     document.getElementById("showDemSoDuong").innerHTML = count
-// }
+    }
+    document.getElementById("showDemSoDuong").innerHTML = count
+}
 
 
 
@@ -290,20 +280,20 @@ function click10() {
 // 3 interesting 
 
 
-// document.getElementById("Min").onclick = function() {
-//     let arrMin = arr
-//     console.log("so nho nhat la", findMin(arrnetroi))
-//     document.getElementById("result3").innerHTML = findMin(arrnetroi)
-// }
-// function findMin(number) {
+document.getElementById("Min").onclick = function() {
+    let arrMin = arr
+    console.log("so nho nhat la", findMin(arrMin))
+    document.getElementById("result3").innerHTML = findMin(arrMin)
+}
+function findMin(number) {
     
-//     let min = number[0]
-//     for(var index = 0; index < number.length; index++) 
-//     if (number[index] < min) {
-//         min = number[index]
-//     }
-//     return min
-// }
+    let min = number[0]
+    for(var index = 0; index < number.length; index++) 
+    if (number[index] < min) {
+        min = number[index]
+    }
+    return min
+}
 
 
 
