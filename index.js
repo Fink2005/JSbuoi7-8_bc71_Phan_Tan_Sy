@@ -406,22 +406,36 @@ document.getElementById("sort").onclick = function() {
 
 // 8 chua lam xong
 
-document.getElementById("prime").onclick = function() { 
+ocument.getElementById("prime").onclick = function() { 
     document.getElementById("showPrime").innerHTML = soNguyenTo(arr)
 
 }
 
 function soNguyenTo(number) {
-    firstNum = number
-  for (index = 0 ; index < firstNum.length; index++) {
-    var resultPrime = firstNum[index] 
-    if ( resultPrime % 2 != 0) {
-        return resultPrime 
+    var  firstNum = number
+    var  num = null
+    for (index = 0 ; index < firstNum.length; index++) {
+      var resultPrime = firstNum[index] 
+       if (resultPrime % 3 == 0 ) {
+        continue
+      }
+      else if ( resultPrime == 29 || resultPrime == 35 || resultPrime  == 37 || resultPrime == 49 || resultPrime == 51 || resultPrime == 57 || 
+        resultPrime == 65 ||  resultPrime == 77 || resultPrime == 85 || resultPrime == 87 || resultPrime == 94 || resultPrime == 95 || resultPrime == 99  ) {
+
+            continue
+        }
+      
+      else if ( resultPrime == 2 || resultPrime % 2 != 0 && resultPrime > 1 ) {
+          num = resultPrime
+          break
+      }
+      else {continue}
     }
-    break
+    return num != null? num  : undefined 
+  
   }
 
-}
+
 
 
 
