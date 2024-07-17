@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <!-- awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <body>
+    <style>
+      #item {
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px;
+        width: 545px;
+        border: 1px solid green;
+      }
+
+      #item:focus {
+        background-color: lightgreen;
+      }
+      .card {
+        height: auto;
+        padding: 25px 15px
+        max-width: 600px;
+        border: 1px solid rgba(94, 108, 179, 0.698);
+        margin-left: 400px;
+        background-color: rgb(24, 117, 148);
+      }
+
+      button {
+        display: flex;
+        justify-content: space-between;
+        background-color: green;
+      }
+      i {
+        padding: 5px;
+      }
+      #span__numbers {
+        display: flex;
+        justify-self: start;
+      }
+      p {
+        margin-top: 15px;
+      }
+    </style>
+    <section id="Bai_tap_array">
+      <div class="card">
+        <div
+          id="Container"
+          class="container d-flex align-items-center"
+          style="flex-direction: column"
+        >
+          <div
+            id="input"
+            style="
+              background-color: beige;
+              height: 150px;
+              width: 90%;
+              margin: 20px;
+              border-radius: 5px;
+
+              border: 1px solid rgb(38, 163, 204);
+            "
+          >
+            <div
+              class="container"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+              "
+            >
+              <span style="width: 100%">
+                <input
+                  style="
+                    width: 60%;
+                    padding: 5px;
+                    border-radius: 7px;
+                    border: 1px solid rgb(13, 111, 144);
+                  "
+                  type="number"
+                  placeholder="Nhập số N"
+                  id="inputne"
+                />
+                <button
+                  onclick="add()"
+                  style="vertical-align: top; width: 35%"
+                  class="btn btn-primary"
+                >
+                  Thêm số
+                </button>
+                <div id="showne" style="width: 100%">Các số bạn đã nhập:</div>
+              </span>
+            </div>
+          </div>
+          <div id="SO_DUONG">
+            <button onclick="click1()" id="item">
+              1️⃣ Tổng số dương <i class="fa fa-arrow-circle-up rotate1"></i>
+            </button>
+            <div
+              class="show1"
+              style="
+                border-radius: 0 0 5px 5px;
+                display: none;
+                background-color: white;
+                padding: 5px;
+              "
+            >
+              <span id="span__numbers">
+                <button
+                  id="tinhtong"
+                  class="btn btn-primary"
+                  style="color: white"
+                >
+                  Tính tổng
+                </button>
+                <div
+                  id="result1"
+                  style="
+                    width: 400px;
+                    background-color: beige;
+                    margin-left: 10px;
+                  "
+                >
+                  <p id="showSoDuong">Tổng số dương là:</p>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="DEM_SO_DUONG">
+            <button onclick="click2()" id="item">
+              2️⃣ Đếm số dương <i class="fa fa-arrow-circle-up rotate2"></i>
+            </button>
+            <div
+              class="show2"
+              style="
+                border-radius: 0 0 5px 5px;
+                display: none;
+                background-color: white;
+                padding: 5px;
+              "
+            >
+              <span id="span__numbers">
+                <button id="dem" class="btn btn-primary" style="color: white">
+                  Đếm
+                </button>
+                <div
+                  id="result2"
+                  style="
+                    width: 400px;
+                    background-color: beige;
+                    margin-left: 10px;
+                  "
+                >
+                  <p id="showDemSoDuong">Các số dương là:</p>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="SO_NHO_NHAT">
+            <button onclick="click3()" id="item">
+              3️⃣ Số nhỏ nhất <i class="fa fa-arrow-circle-up rotate3"></i>
+            </button>
+            <div
+              class="show3"
+              style="
+                border-radius: 0 0 5px 5px;
+                display: none;
+                background-color: white;
+                padding: 5px;
+              "
+            >
+              <span id="span__numbers">
+                <button id="Min" class="btn btn-primary" style="color: white">
+                  Min
+                </button>
+                <div
+                  id="result3"
+                  style="
+                    width: 400px;
+                    background-color: beige;
+                    margin-left: 10px;
+                  "
+                >
+                  <p id="showMin">Min number là:</p>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="SO_DUONG_NHO_NHAT">
+            <button onclick="click4()" id="item">
+              4️⃣ Số dương nhỏ nhất <i class="fa fa-arrow-circle-up rotate4"></i>
+            </button>
+            <div
+              class="show4"
+              style="
+                border-radius: 0 0 5px 5px;
+                display: none;
+                background-color: white;
+                padding: 5px;
+              "
+            >
+              <span id="span__numbers">
+                <button id="MinP" class="btn btn-primary" style="color: white">
+                  Max
+                </button>
+                <div
+                  id="result4"
+                  style="
+                    width: 400px;
+                    background-color: beige;
+                    margin-left: 10px;
+                  "
+                >
+                  <p id="showMax">Max number là:</p>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="SO_CHAN_CUOI_CUNG">
+            <button onclick="click5()" id="item">
+              5️⃣ Tìm số chẵn cuối cùng
+              <i class="fa fa-arrow-circle-up rotate5"></i>
+            </button>
+            <div
+              class="show5"
+              style="
+                border-radius: 0 0 5px 5px;
+                display: none;
+                background-color: white;
+                padding: 5px;
+              "
+            >
+              <span id="span__numbers">
+                <button id="Even" class="btn btn-primary" style="color: white">
+                  Last even number
+                </button>
+                <div
+                  id="result5"
+                  style="
+                    width: 400px;
+                    background-color: beige;
+                    margin-left: 10px;
+                  "
+                >
+                  <p id="showEven">Even number là:</p>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="DOI_CHO">
+            <button onclick="click6()" id="item">
+              6️⃣ Đổi chỗ <i class="fa fa-arrow-circle-up rotate6"></i>
+            </button>
+            <div
+              class="show6"
+              style="
+                border-radius: 0 0 5px 5px;
+                display: none;
+                background-color: white;
+                padding: 5px;
+              "
+            >
+              <span
+                id="span__numbers"
+                style="
+                  height: 25%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                "
+              >
+                <input
+                  id="doi1"
+                  style="width: 50%; margin: 5px; border-radius: 5px"
+                  type="text"
+                  placeholder="Nhập vị trí bạn muốn đổi 1"
+                />
+                <input
+                  id="doi2"
+                  style="width: 50%; margin: 5px; border-radius: 5px"
+                  type="text"
+                  placeholder="nhập vị trí bạn muốn đổi 2"
+                />
+                <button
+                  id="reverse"
+                  class="btn btn-primary"
+                  style="width: 90%; color: white"
+                >
+                  Last even number
+                </button>
+                <div
+                  id="result6"
+                  style="
+                    width: 100%;
+                    background-color: beige;
+                    margin-left: 10px;
+                    padding-left: 25px;
+                  "
+                >
+                  <p id="showReverse">các số đã đổi chỗ là:</p>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="SAP_XEP_TANG_DAN">
+            <button onclick="click7()" id="item">
+              7️⃣ Sắp xếp tăng dần <i class="fa fa-arrow-circle-up rotate7"></i>
+            </button>
+            <div
+              class="show7"
+              style="
+                border-radius: 0 0 5px 5px;
+                display: none;
+                background-color: white;
+                padding: 5px;
+              "
+            >
+              <span id="span__numbers">
+                <button id="sort" class="btn btn-primary" style="color: white">
+                  Sort
+                </button>
+                <div
+                  id="result7"
+                  style="
+                    width: 400px;
+                    background-color: beige;
+                    margin-left: 10px;
+                  "
+                >
+                  <p id="showSort">number sau khi sort là:</p>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="SO_NGUYEN_DAU_TIEN">
+            <button onclick="click8()" id="item">
+              8️⃣ Tìm số nguyên tố đầu tiên
+              <i class="fa fa-arrow-circle-up rotate8"></i>
+            </button>
+            <div
+              class="show8"
+              style="
+                border-radius: 0 0 5px 5px;
+                display: none;
+                background-color: white;
+                padding: 5px;
+              "
+            >
+              <span id="span__numbers">
+                <button id="prime" class="btn btn-primary" style="color: white">
+                  Tìm
+                </button>
+                <div
+                  id="result8"
+                  style="
+                    width: 400px;
+                    background-color: beige;
+                    margin-left: 10px;
+                  "
+                >
+                  <p id="showPrime">số nguyên tố đầu tiên là:</p>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="DEM_SO_NGUYEN">
+            <button onclick="click9()" id="item">
+              9️⃣ Đếm số nguyên <i class="fa fa-arrow-circle-up rotate9"></i>
+            </button>
+            <div
+              class="show9"
+              style="
+                border-radius: 0 0 5px 5px;
+                display: none;
+                background-color: white;
+                padding: 5px;
+              "
+            >
+              <span id="span__numbers">
+                <button
+                  id="countNguyen"
+                  class="btn btn-primary"
+                  style="color: white"
+                >
+                  Đếm
+                </button>
+                <div
+                  id="result9"
+                  style="
+                    width: 400px;
+                    background-color: beige;
+                    margin-left: 10px;
+                  "
+                >
+                  <p id="showCountNguyen">các số nguyên là:</p>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="SO_SANH">
+            <button onclick="click10()" id="item">
+              🔟 So sánh lượng số âm và dương
+              <i class="fa fa-arrow-circle-up rotate10"></i>
+            </button>
+            <div
+              class="show10"
+              style="
+                border-radius: 0 0 5px 5px;
+                display: none;
+                background-color: white;
+                padding: 5px;
+              "
+            >
+              <span id="span__numbers">
+                <button
+                  id="compare"
+                  class="btn btn-primary"
+                  style="color: white"
+                >
+                  Compare
+                </button>
+                <div
+                  id="result10"
+                  style="
+                    width: 400px;
+                    background-color: beige;
+                    margin-left: 10px;
+                  "
+                >
+                  <p id="showCompare">so sanh::</p>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
