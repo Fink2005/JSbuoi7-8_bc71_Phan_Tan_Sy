@@ -404,9 +404,9 @@ document.getElementById("sort").onclick = function() {
    document.getElementById("showSort").innerHTML = sort
 }
 
-// 8 chua lam xong
+// 8 
 
-ocument.getElementById("prime").onclick = function() { 
+document.getElementById("prime").onclick = function() { 
     document.getElementById("showPrime").innerHTML = soNguyenTo(arr)
 
 }
@@ -431,7 +431,7 @@ function soNguyenTo(number) {
       }
       else {continue}
     }
-    return num != null? num  : undefined 
+    return num != null ? num  : undefined 
   
   }
 
